@@ -2,8 +2,6 @@
 # Date: 2024
 # Github: https://github.com/masterking32
 
-# יבוא המודול הנדרש
-from keep_alive import keep_alive
 import datetime
 import requests
 import json
@@ -18,12 +16,6 @@ from utilities import (
     DailyCipherDecode,
     TextToMorseCode,
 )
-
-# הפעלת השרת ברקע
-keep_alive()
-
-# קוד האפליקציה הראשי שלך מתחיל כאן
-
 
 # ---------------------------------------------#
 # Configuration
@@ -70,14 +62,31 @@ AccountList = [
         # If you do not wish to use this feature for this account, leave it empty.
         # This feature is optional and is required to enable the telegramBotLogging feature below.
         "telegram_chat_id": "",  # String - you can get it from https://t.me/chatIDrobot
-    },
-    # Add more accounts if you want to use multiple accounts
-    # {
-    #     "account_name": "Account 2",
-    #     "Authorization": "Bearer Token_Here",
-    #     ...
-    #     other configurations like the first account
-    # },
+    {
+        "account_name": "Account 2",  # A custom name for the account (not important, just for logs)
+        "Authorization": "Bearer 17192205433246S573SASAy5RuTkkNXwIeEZ6dITED05w9JxKmIYKG68LNr3ftrYMmwIQUGc6xVm85620084931",  # To get the token, refer to the README.md file
+        "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",  # Refer to the README.md file to obtain a user agent
+        "Proxy": {},  # You can use proxies to avoid getting banned. Use {} for no proxy
+        # Example of using a proxy:
+        # "Proxy": {
+        #   "https": "https://10.10.1.10:3128",
+        #   "http": "http://user:pass@10.10.1.10:3128/"
+        # },
+        "config": {
+            "auto_tap": True,  # Enable auto tap by setting it to True, or set it to False to disable
+            "auto_free_tap_boost": True,  # Enable auto free tap boost by setting it to True, or set it to False to disable
+            "auto_get_daily_cipher": True,  # Enable auto get daily cipher by setting it to True, or set it to False to disable
+            "auto_get_daily_task": True,  # Enable auto get daily task by setting it to True, or set it to False to disable
+            "auto_upgrade": True,  # Enable auto upgrade by setting it to True, or set it to False to disable
+            "auto_upgrade_start": 100,  # Start buying upgrades when the balance is greater than this amount
+            "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
+            # This feature will ignore the auto_upgrade_start and auto_upgrade_min.
+            # By changing it to True, the bot will first find the overall best card and then wait for the best card to be available (based on cooldown or price).
+            # When the best card is available, the bot will buy it and then wait for the next best card to be available.
+            # This feature will stop buying upgrades when the balance is less than the price of the best card.
+            "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
+            "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
+        },
 ]
 
 # ---------------------------------------------#
