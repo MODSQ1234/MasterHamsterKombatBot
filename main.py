@@ -1,8 +1,9 @@
 # Developed by: MasterkinG32
 # Date: 2024
 # Github: https://github.com/masterking32
+
+# יבוא המודול הנדרש
 from keep_alive import keep_alive
-keep_alive()
 import datetime
 import requests
 import json
@@ -17,6 +18,12 @@ from utilities import (
     DailyCipherDecode,
     TextToMorseCode,
 )
+
+# הפעלת השרת ברקע
+keep_alive()
+
+# קוד האפליקציה הראשי שלך מתחיל כאן
+
 
 # ---------------------------------------------#
 # Configuration
