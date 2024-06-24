@@ -2,7 +2,7 @@
 # Date: 2024
 # Github: https://github.com/masterking32
 from keep_alive import keep_alive
-keep_live()
+keep_alive()
 import datetime
 import requests
 import json
