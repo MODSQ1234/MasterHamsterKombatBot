@@ -32,8 +32,8 @@ MaxRandomDelay = 120
 AccountList = [
     {
         "account_name": "Account 1",  # A custom name for the account (not important, just for logs)
-        "Authorization": "Bearer TOKEN_HERE",  # To get the token, refer to the README.md file
-        "UserAgent": "Your UserAgent",  # Refer to the README.md file to obtain a user agent
+        "Authorization": "Bearer 1719178023290V0tlEQCtuZzRkizWN9ECllVWNd3jAkQApXH0xz9DqcnAcdibnOPkVO14RhdG9h1y5174247577",  # To get the token, refer to the README.md file
+        "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",  # Refer to the README.md file to obtain a user agent
         "Proxy": {},  # You can use proxies to avoid getting banned. Use {} for no proxy
         # Example of using a proxy:
         # "Proxy": {
@@ -46,8 +46,8 @@ AccountList = [
             "auto_get_daily_cipher": True,  # Enable auto get daily cipher by setting it to True, or set it to False to disable
             "auto_get_daily_task": True,  # Enable auto get daily task by setting it to True, or set it to False to disable
             "auto_upgrade": True,  # Enable auto upgrade by setting it to True, or set it to False to disable
-            "auto_upgrade_start": 2000000,  # Start buying upgrades when the balance is greater than this amount
-            "auto_upgrade_min": 100000,  # Stop buying upgrades when the balance is less than this amount
+            "auto_upgrade_start": 100,  # Start buying upgrades when the balance is greater than this amount
+            "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
             # This feature will ignore the auto_upgrade_start and auto_upgrade_min.
             # By changing it to True, the bot will first find the overall best card and then wait for the best card to be available (based on cooldown or price).
             # When the best card is available, the bot will buy it and then wait for the next best card to be available.
