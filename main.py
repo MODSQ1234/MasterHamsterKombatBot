@@ -18,18 +18,8 @@ from utilities import (
 )
 
 # ---------------------------------------------#
-# Configuration
-# ---------------------------------------------#
-# Recheck time in seconds to check all accounts again (60 seconds = 1 minute and 0 means no recheck)
-AccountsRecheckTime = 300
-
-# Adds a random delay to the AccountsRecheckTime interval to make it more unpredictable and less detectable.
-# Set it to 0 to disable the random delay.
-# For example, if set to 120, the bot will introduce a random delay between 1 and 120 seconds each time it rechecks.
-MaxRandomDelay = 120
-
-AccountList = [
-    {
+# ConfiguAccountList = {
+    "Account 1": {
         "account_name": "Account 1",  # A custom name for the account (not important, just for logs)
         "Authorization": "Bearer 1719178023290V0tlEQCtuZzRkizWN9ECllVWNd3jAkQApXH0xz9DqcnAcdibnOPkVO14RhdG9h1y5174247577",  # To get the token, refer to the README.md file
         "UserAgent": "Mozilla/5.0 (Linux; Android 11; Primo HM7 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.134 Mobile Safari/537.36",  # Refer to the README.md file to obtain a user agent
@@ -47,22 +37,12 @@ AccountList = [
             "auto_upgrade": True,  # Enable auto upgrade by setting it to True, or set it to False to disable
             "auto_upgrade_start": 100,  # Start buying upgrades when the balance is greater than this amount
             "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
-            # This feature will ignore the auto_upgrade_start and auto_upgrade_min.
-            # By changing it to True, the bot will first find the overall best card and then wait for the best card to be available (based on cooldown or price).
-            # When the best card is available, the bot will buy it and then wait for the next best card to be available.
-            # This feature will stop buying upgrades when the balance is less than the price of the best card.
             "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
             "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
         },
-        # If you have enabled Telegram bot logging,
-        # you can add your chat ID below to receive logs in your Telegram account.
-        # You can obtain your chat ID by messaging @chatIDrobot.
-        # Example: "telegram_chat_id": "12345678".
-        # If you do not wish to use this feature for this account, leave it empty.
-        # This feature is optional and is required to enable the telegramBotLogging feature below.
         "telegram_chat_id": "",  # String - you can get it from https://t.me/chatIDrobot
     },
-    {
+    "Account 2": {
         "account_name": "Account 2",  # A custom name for the account (not important, just for logs)
         "Authorization": "Bearer 17192205433246S573SASAy5RuTkkNXwIeEZ6dITED05w9JxKmIYKG68LNr3ftrYMmwIQUGc6xVm85620084931",  # To get the token, refer to the README.md file
         "UserAgent": "Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.0.0 DuckDuckGo/5 Safari/537.36",  # Refer to the README.md file to obtain a user agent
@@ -80,15 +60,21 @@ AccountList = [
             "auto_upgrade": True,  # Enable auto upgrade by setting it to True, or set it to False to disable
             "auto_upgrade_start": 100,  # Start buying upgrades when the balance is greater than this amount
             "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
-            # This feature will ignore the auto_upgrade_start and auto_upgrade_min.
-            # By changing it to True, the bot will first find the overall best card and then wait for the best card to be available (based on cooldown or price).
-            # When the best card is available, the bot will buy it and then wait for the next best card to be available.
-            # This feature will stop buying upgrades when the balance is less than the price of the best card.
             "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
             "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
         },
     }
-]
+}ration
+# ---------------------------------------------#
+# Recheck time in seconds to check all accounts again (60 seconds = 1 minute and 0 means no recheck)
+AccountsRecheckTime = 300
+
+# Adds a random delay to the AccountsRecheckTime interval to make it more unpredictable and less detectable.
+# Set it to 0 to disable the random delay.
+# For example, if set to 120, the bot will introduce a random delay between 1 and 120 seconds each time it rechecks.
+MaxRandomDelay = 120
+
+
 # ---------------------------------------------#
 # Telegram Logging
 # By enabling this feature, you will receive logs in your Telegram account.
