@@ -28,10 +28,6 @@ AccountsRecheckTime = 300
 # For example, if set to 120, the bot will introduce a random delay between 1 and 120 seconds each time it rechecks.
 MaxRandomDelay = 120
 
-# Accounts will be checked in the order they are listed
-AccountList = [
-    {
-        "
 AccountList = [
     {
         "account_name": "Account 1",  # A custom name for the account (not important, just for logs)
