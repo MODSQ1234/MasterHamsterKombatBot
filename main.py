@@ -1,24 +1,4 @@
-# Developed by: MasterkinG32
-# Date: 2024
-# Github: https://github.com/masterking32
-
-import datetime
-import requests
-import json
-import time
-import logging
-import asyncio
-import random
-from colorlog import ColoredFormatter
-from utilities import (
-    SortUpgrades,
-    number_to_string,
-    DailyCipherDecode,
-    TextToMorseCode,
-)
-
-# ---------------------------------------------#
-# ConfiguAccountList = {
+# Developed {
     "Account 1": {
         "account_name": "Account 1",  # A custom name for the account (not important, just for logs)
         "Authorization": "Bearer 1719178023290V0tlEQCtuZzRkizWN9ECllVWNd3jAkQApXH0xz9DqcnAcdibnOPkVO14RhdG9h1y5174247577",  # To get the token, refer to the README.md file
@@ -62,9 +42,10 @@ from utilities import (
             "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
             "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
             "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
-        },
+        }
     }
-}ration
+}
+
 # ---------------------------------------------#
 # Recheck time in seconds to check all accounts again (60 seconds = 1 minute and 0 means no recheck)
 AccountsRecheckTime = 300
@@ -73,7 +54,6 @@ AccountsRecheckTime = 300
 # Set it to 0 to disable the random delay.
 # For example, if set to 120, the bot will introduce a random delay between 1 and 120 seconds each time it rechecks.
 MaxRandomDelay = 120
-
 
 # ---------------------------------------------#
 # Telegram Logging
@@ -86,7 +66,7 @@ MaxRandomDelay = 120
 telegramBotLogging = {
     "is_active": False,  # Set it to True if you want to use it, and make sure to fill out the below fields
     "bot_token": "",  # HTTP API access token from https://t.me/BotFather ~ Start your bot after creating it
-    # Configure the what you want to receive logs from the bot
+    # Configure what you want to receive logs from the bot
     "messages": {
         "general_info": True,  # General information
         "account_info": True,  # Account information
@@ -95,8 +75,30 @@ telegramBotLogging = {
         "daily_cipher": True,  # Daily cipher
         "daily_task": False,  # Daily task
         "upgrades": True,  # Upgrades
-    },
-}
+    }
+}by: MasterkinG32
+# Date: 2024
+# Github: https://github.com/masterking32
+
+import datetime
+import requests
+import json
+import time
+import logging
+import asyncio
+import random
+from colorlog import ColoredFormatter
+from utilities import (
+    SortUpgrades,
+    number_to_string,
+    DailyCipherDecode,
+    TextToMorseCode,
+)
+
+# ---------------------------------------------#
+# ConfiguAccountList = {
+    "Account 1": {
+        "acc
 
 # ---------------------------------------------#
 # Logging configuration
