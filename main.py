@@ -31,9 +31,12 @@ MaxRandomDelay = 120
 # Accounts will be checked in the order they are listed
 AccountList = [
     {
+        "
+AccountList = [
+    {
         "account_name": "Account 1",  # A custom name for the account (not important, just for logs)
         "Authorization": "Bearer 1719178023290V0tlEQCtuZzRkizWN9ECllVWNd3jAkQApXH0xz9DqcnAcdibnOPkVO14RhdG9h1y5174247577",  # To get the token, refer to the README.md file
-        "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",  # Refer to the README.md file to obtain a user agent
+        "UserAgent": "Mozilla/5.0 (Linux; Android 11; Primo HM7 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.134 Mobile Safari/537.36",  # Refer to the README.md file to obtain a user agent
         "Proxy": {},  # You can use proxies to avoid getting banned. Use {} for no proxy
         # Example of using a proxy:
         # "Proxy": {
@@ -62,10 +65,11 @@ AccountList = [
         # If you do not wish to use this feature for this account, leave it empty.
         # This feature is optional and is required to enable the telegramBotLogging feature below.
         "telegram_chat_id": "",  # String - you can get it from https://t.me/chatIDrobot
+    },
     {
         "account_name": "Account 2",  # A custom name for the account (not important, just for logs)
         "Authorization": "Bearer 17192205433246S573SASAy5RuTkkNXwIeEZ6dITED05w9JxKmIYKG68LNr3ftrYMmwIQUGc6xVm85620084931",  # To get the token, refer to the README.md file
-        "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",  # Refer to the README.md file to obtain a user agent
+        "UserAgent": "Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.0.0 DuckDuckGo/5 Safari/537.36",  # Refer to the README.md file to obtain a user agent
         "Proxy": {},  # You can use proxies to avoid getting banned. Use {} for no proxy
         # Example of using a proxy:
         # "Proxy": {
@@ -87,8 +91,8 @@ AccountList = [
             "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
             "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
         },
+    }
 ]
-
 # ---------------------------------------------#
 # Telegram Logging
 # By enabling this feature, you will receive logs in your Telegram account.
