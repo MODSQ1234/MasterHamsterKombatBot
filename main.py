@@ -1,82 +1,4 @@
-# Developed {
-    "Account 1": {
-        "account_name": "Account 1",  # A custom name for the account (not important, just for logs)
-        "Authorization": "Bearer 1719178023290V0tlEQCtuZzRkizWN9ECllVWNd3jAkQApXH0xz9DqcnAcdibnOPkVO14RhdG9h1y5174247577",  # To get the token, refer to the README.md file
-        "UserAgent": "Mozilla/5.0 (Linux; Android 11; Primo HM7 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.134 Mobile Safari/537.36",  # Refer to the README.md file to obtain a user agent
-        "Proxy": {},  # You can use proxies to avoid getting banned. Use {} for no proxy
-        # Example of using a proxy:
-        # "Proxy": {
-        #   "https": "https://10.10.1.10:3128",
-        #   "http": "http://user:pass@10.10.1.10:3128/"
-        # },
-        "config": {
-            "auto_tap": True,  # Enable auto tap by setting it to True, or set it to False to disable
-            "auto_free_tap_boost": True,  # Enable auto free tap boost by setting it to True, or set it to False to disable
-            "auto_get_daily_cipher": True,  # Enable auto get daily cipher by setting it to True, or set it to False to disable
-            "auto_get_daily_task": True,  # Enable auto get daily task by setting it to True, or set it to False to disable
-            "auto_upgrade": True,  # Enable auto upgrade by setting it to True, or set it to False to disable
-            "auto_upgrade_start": 100,  # Start buying upgrades when the balance is greater than this amount
-            "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
-            "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
-            "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
-        },
-        "telegram_chat_id": "",  # String - you can get it from https://t.me/chatIDrobot
-    },
-    "Account 2": {
-        "account_name": "Account 2",  # A custom name for the account (not important, just for logs)
-        "Authorization": "Bearer 17192205433246S573SASAy5RuTkkNXwIeEZ6dITED05w9JxKmIYKG68LNr3ftrYMmwIQUGc6xVm85620084931",  # To get the token, refer to the README.md file
-        "UserAgent": "Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.0.0 DuckDuckGo/5 Safari/537.36",  # Refer to the README.md file to obtain a user agent
-        "Proxy": {},  # You can use proxies to avoid getting banned. Use {} for no proxy
-        # Example of using a proxy:
-        # "Proxy": {
-        #   "https": "https://10.10.1.10:3128",
-        #   "http": "http://user:pass@10.10.1.10:3128/"
-        # },
-        "config": {
-            "auto_tap": True,  # Enable auto tap by setting it to True, or set it to False to disable
-            "auto_free_tap_boost": True,  # Enable auto free tap boost by setting it to True, or set it to False to disable
-            "auto_get_daily_cipher": True,  # Enable auto get daily cipher by setting it to True, or set it to False to disable
-            "auto_get_daily_task": True,  # Enable auto get daily task by setting it to True, or set it to False to disable
-            "auto_upgrade": True,  # Enable auto upgrade by setting it to True, or set it to False to disable
-            "auto_upgrade_start": 100,  # Start buying upgrades when the balance is greater than this amount
-            "auto_upgrade_min": 100,  # Stop buying upgrades when the balance is less than this amount
-            "wait_for_best_card": False,  # Recommended to keep it True for high level accounts
-            "auto_get_task": True,  # Enable auto get (Youtube/Twitter and ...) task to True, or set it to False to disable
-        }
-    }
-}
-
-# ---------------------------------------------#
-# Recheck time in seconds to check all accounts again (60 seconds = 1 minute and 0 means no recheck)
-AccountsRecheckTime = 300
-
-# Adds a random delay to the AccountsRecheckTime interval to make it more unpredictable and less detectable.
-# Set it to 0 to disable the random delay.
-# For example, if set to 120, the bot will introduce a random delay between 1 and 120 seconds each time it rechecks.
-MaxRandomDelay = 120
-
-# ---------------------------------------------#
-# Telegram Logging
-# By enabling this feature, you will receive logs in your Telegram account.
-# To use this feature, you need to create a bot and obtain the token from @BotFather.
-# Note: Only important logs are sent to Telegram, feel free to include more logs as needed.
-# You can also use this feature to receive logs from a bot running on a server.
-# If you don't want to use this feature, set "is_active" to False and leave "bot_token" and "uid" fields empty.
-# This feature is optional, and you can disable it by setting "is_active" to False.
-telegramBotLogging = {
-    "is_active": False,  # Set it to True if you want to use it, and make sure to fill out the below fields
-    "bot_token": "",  # HTTP API access token from https://t.me/BotFather ~ Start your bot after creating it
-    # Configure what you want to receive logs from the bot
-    "messages": {
-        "general_info": True,  # General information
-        "account_info": True,  # Account information
-        "http_errors": False,  # HTTP errors
-        "other_errors": False,  # Other errors
-        "daily_cipher": True,  # Daily cipher
-        "daily_task": False,  # Daily task
-        "upgrades": True,  # Upgrades
-    }
-}by: MasterkinG32
+# Developed by: MasterkinG32
 # Date: 2024
 # Github: https://github.com/masterking32
 
@@ -96,9 +18,98 @@ from utilities import (
 )
 
 # ---------------------------------------------#
-# ConfiguAccountList = {
-    "Account 1": {
-        "acc
+# Configuration
+# ---------------------------------------------#
+# Recheck time in seconds to check all accounts again (60 seconds = 1 minute and 0 means no recheck)
+AccountsRecheckTime = 300
+
+# Adds a random delay to the AccountsRecheckTime interval to make it more unpredictable and less detectable.
+# Set it to 0 to disable the random delay.
+# For example, if set to 120, the bot will introduce a random delay between 1 and 120 seconds each time it rechecks.
+MaxRandomDelay = 120
+
+# Accounts will be checked in the order they are listed
+AccountList = [
+    {
+        "account_name": "Account 1",
+        "Authorization": "Bearer 1719178023290V0tlEQCtuZzRkizWN9ECllVWNd3jAkQApXH0xz9DqcnAcdibnOPkVO14RhdG9h1y5174247577",
+        "UserAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36",
+        "Proxy": {},
+        "config": {
+            "auto_tap": True,
+            "auto_free_tap_boost": True,
+            "auto_get_daily_cipher": True,
+            "auto_get_daily_task": True,
+            "auto_upgrade": True,
+            "auto_upgrade_start": 2000000,
+            "auto_upgrade_min": 100000,
+            "wait_for_best_card": False,
+            "auto_get_task": True,
+        },
+        "telegram_chat_id": "1098027220 ",  # להשלים במידת הצורך
+    },
+    {
+        "account_name": "Account 2",
+        "Authorization": "Bearer 1719750670340aQhFojttOaP5aDOVRu4rVLTyqEa6ZP8yQjpb6iXOgWcl6u8uGlkjcmkhxjP2sOro5929566944",
+        "UserAgent": "Mozilla/5.0 (Linux; Android 10; HLK-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.101 Mobile Safari/537.36",
+        "Proxy": {},
+        "config": {
+            "auto_tap": True,
+            "auto_free_tap_boost": True,
+            "auto_get_daily_cipher": True,
+            "auto_get_daily_task": True,
+            "auto_upgrade": True,
+            "auto_upgrade_start": 10000,
+            "auto_upgrade_min": 30000,
+            "wait_for_best_card": False,
+            "auto_get_task": True,
+        },
+        "telegram_chat_id": "1098027220 ",  # להשלים במידת הצורך
+    },
+    {
+        "account_name": "Account 3",  # שינוי לחשבון נוסף
+        "Authorization": "Bearer 17192506173925YdZSRaTo9VCkiMDSOtZuzV9tPEgGlXy4gjDzMbpXwWElaJdpaJEfBILDj20Udkl5885312953",  # כאן אתה צריך להכניס את ה-token
+        "UserAgent": "Mozilla/5.0 (Linux; Android 9; SO-02K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.101 Mobile Safari/537.36",  # וכאן את ה-user agent
+        "Proxy": {
+            "http": "https://104.207.58.189:3128"
+        },  # לא משתמש ב-proxy כאן
+        "config": {
+            "auto_tap": True,
+            "auto_free_tap_boost": True,
+            "auto_get_daily_cipher": True,
+            "auto_get_daily_task": True,
+            "auto_upgrade": True,
+            "auto_upgrade_start": 2000000,
+            "auto_upgrade_min": 100000,
+            "wait_for_best_card": False,
+            "auto_get_task": True,
+        },
+        "telegram_chat_id": "1098027220",  # להשלים במידת הצורך
+    },
+]
+
+# ---------------------------------------------#
+# Telegram Logging
+# By enabling this feature, you will receive logs in your Telegram account.
+# To use this feature, you need to create a bot and obtain the token from @BotFather.
+# Note: Only important logs are sent to Telegram, feel free to include more logs as needed.
+# You can also use this feature to receive logs from a bot running on a server.
+# If you don't want to use this feature, set "is_active" to False and leave "bot_token" and "uid" fields empty.
+# This feature is optional, and you can disable it by setting "is_active" to False.
+telegramBotLogging = {
+    "is_active": True,  # Set it to True if you want to use it, and make sure to fill out the below fields
+    "bot_token": "6815171521:AAFgTeHo95UmQD2fIpCq5E0bw532kJCSznY",  # HTTP API access token from https://t.me/BotFather ~ Start your bot after creating it
+    # Configure the what you want to receive logs from the bot
+    "messages": {
+        "general_info": True,  # General information
+        "account_info": True,  # Account information
+        "http_errors": True,  # HTTP errors
+        "other_errors": True,  # Other errors
+        "daily_cipher": True,  # Daily cipher
+        "daily_task": True,  # Daily task
+        "upgrades": True,  # Upgrades
+    },
+}
 
 # ---------------------------------------------#
 # Logging configuration
@@ -137,8 +148,8 @@ class HamsterKombatAccount:
         print(message)
         if (
             not telegramBotLogging["is_active"]
-            or self.telegram_chat_id == ""
-            or telegramBotLogging["bot_token"] == ""
+            or self.telegram_chat_id == "1098027220"
+            or telegramBotLogging["bot_token"] == "6815171521:AAFgTeHo95UmQD2fIpCq5E0bw532kJCSznY"
         ):
             return
 
